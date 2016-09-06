@@ -1,5 +1,7 @@
 # README
 
+This project is folowing the [React on Rails](https://www.nopio.com/blog/react-rails-part-1-tutorial/?utm_source=LinkedIn%20Groups&utm_medium=Post&utm_campaign=LinkedIn%20React%20JS%20RubyonRails%20Group) Tutorial
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
