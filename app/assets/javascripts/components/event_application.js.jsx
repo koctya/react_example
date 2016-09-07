@@ -3,9 +3,11 @@ var EventApplication = React.createClass({
   getInitialState: function() {
     return { events: [] };
   },
+
   componentDidMount: function() {
     this.getDataFromApi();
   },
+
   getDataFromApi: function() {
     var self = this;
     $.ajax({
@@ -18,9 +20,17 @@ var EventApplication = React.createClass({
       }
     });
   },
+
+  handleAdd: function(event) {
+    var events = this.state.events;
+    events.push(event);
+    this.setState({ events: events });
+  },
+
   handleSearch: function(events) {
     this.setState({ events: events });
   },
+
   render: function() {
     return(
       <div className="container">
@@ -31,6 +41,9 @@ var EventApplication = React.createClass({
         <div className="row">
           <div className="col-md-4">
             <SearchForm handleSearch={this.handleSearch} />
+          </div>
+          <div className="col-md-8">
+            <NewForm handleAdd={this.handleAdd} />
           </div>
         </div>
         <div className="row">
